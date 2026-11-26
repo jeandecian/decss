@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>decss - Semantic HTML Kitchen Sink</title>
+  </head>
+  <body>
+    <header>
+      <h1>decss</h1>
+      <p>A raw semantic HTML kitchen sink.</p>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#quotes">Quotes</a></li>
+          <li><a href="#code">Code</a></li>
+          <li><a href="#lists">Lists</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#structure">Structure</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#data">Data</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="typography">
+        <h2>Typography</h2>
+        <h1>Heading level 1</h1>
+        <h2>Heading level 2</h2>
+        <h3>Heading level 3</h3>
+        <h4>Heading level 4</h4>
+        <h5>Heading level 5</h5>
+        <h6>Heading level 6</h6>
+        <p>
+          Paragraph with <strong>strong importance</strong>, <em>emphasis</em>, <small>small print</small>,
+          <mark>marked text</mark>, <del>deleted text</del>, <ins>inserted text</ins>,
+          H<sub>2</sub>O, E = mc<sup>2</sup>, <abbr title="HyperText Markup Language">HTML</abbr>,
+          and a <a href="https://developer.mozilla.org/">sample link</a>.
+        </p>
+        <p>Citation of a work: <cite>The Elements of Style</cite>. Inline quotation: <q>Simplicity is the ultimate sophistication.</q></p>
+      </section>
+
+      <section id="quotes">
+        <h2>Quotes</h2>
+        <blockquote>
+          <p>The web is more a social creation than a technical one.</p>
+          <footer>
+            <figcaption>Tim Berners-Lee</figcaption>
+            <cite>Weaving the Web</cite>
+          </footer>
+        </blockquote>
+      </section>
+
+      <section id="code">
+        <h2>Code and Preformatted Text</h2>
+        <p>Inline code: <code>const x = 42;</code></p>
+        <pre><code>function greet(name) {
+  return `Hello, ${name}`;
+}</code></pre>
+        <p>Keyboard input: press <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
+        <p>Sample output: <samp>Build finished successfully.</samp></p>
+        <p>Variable: <var>n</var> is the number of items.</p>
+      </section>
+
+      <section id="lists">
+        <h2>Lists</h2>
+        <h3>Unordered list</h3>
+        <ul>
+          <li>First item</li>
+          <li>Second item
+            <ul>
+              <li>Nested item</li>
+            </ul>
+          </li>
+        </ul>
+        <h3>Ordered list</h3>
+        <ol>
+          <li>Step one</li>
+          <li>Step two</li>
+          <li>Step three</li>
+        </ol>
+        <h3>Description list</h3>
+        <dl>
+          <dt>HTML</dt>
+          <dd>The standard markup language for documents on the web.</dd>
+          <dt>Semantics</dt>
+          <dd>Markup that describes the meaning of content.</dd>
+        </dl>
+      </section>
+
+      <section id="buttons">
+        <h2>Buttons</h2>
+        <button type="button">Default button</button>
+        <button type="button" disabled>Disabled button</button>
+        <input type="button" value="Input button">
+        <input type="submit" value="Input submit">
+        <input type="reset" value="Input reset">
+      </section>
+
+      <section id="forms">
+        <h2>Forms</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Personal information</legend>
+            <p>
+              <label for="f-text">Text</label>
+              <input id="f-text" type="text" name="text">
+            </p>
+            <p>
+              <label for="f-email">Email</label>
+              <input id="f-email" type="email" name="email">
+            </p>
+            <p>
+              <label for="f-password">Password</label>
+              <input id="f-password" type="password" name="password">
+            </p>
+            <p>
+              <label for="f-search">Search</label>
+              <input id="f-search" type="search" name="search">
+            </p>
+            <p>
+              <label for="f-url">Website</label>
+              <input id="f-url" type="url" name="url">
+            </p>
+            <p>
+              <label for="f-tel">Phone</label>
+              <input id="f-tel" type="tel" name="tel">
+            </p>
+            <p>
+              <label for="f-number">Number</label>
+              <input id="f-number" type="number" name="number" min="0" max="10" step="1">
+            </p>
+            <p>
+              <label for="f-date">Date</label>
+              <input id="f-date" type="date" name="date">
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferences</legend>
+            <p>
+              <label for="f-select">Choose a language</label>
+              <select id="f-select" name="language">
+                <optgroup label="Compiled">
+                  <option value="c">C</option>
+                  <option value="go">Go</option>
+                </optgroup>
+                <optgroup label="Interpreted">
+                  <option value="js">JavaScript</option>
+                  <option value="py">Python</option>
+                </optgroup>
+              </select>
+            </p>
+            <p>
+              <label for="f-textarea">Message</label>
+              <textarea id="f-textarea" name="message" rows="4" cols="40"></textarea>
+            </p>
+            <p>
+              <input id="f-check" type="checkbox" name="newsletter" value="yes">
+              <label for="f-check">Subscribe to newsletter</label>
+            </p>
+            <fieldset>
+              <legend>Plan</legend>
+              <p>
+                <input id="f-radio-1" type="radio" name="plan" value="free" checked>
+                <label for="f-radio-1">Free</label>
+              </p>
+              <p>
+                <input id="f-radio-2" type="radio" name="plan" value="pro">
+                <label for="f-radio-2">Pro</label>
+              </p>
+            </fieldset>
+            <p>
+              <label for="f-range">Volume</label>
+              <input id="f-range" type="range" name="volume" min="0" max="100" value="50">
+            </p>
+          </fieldset>
+
+          <p>
+            <label for="f-progress">Upload progress</label>
+            <progress id="f-progress" max="100" value="70">70%</progress>
+          </p>
+          <p>
+            <label for="f-meter">Disk usage</label>
+            <meter id="f-meter" min="0" max="100" value="65" low="30" high="80" optimum="20">65%</meter>
+          </p>
+
+          <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </p>
+        </form>
+      </section>
+
+      <section id="tables">
+        <h2>Tables</h2>
+        <table>
+          <caption>Quarterly results</caption>
+          <thead>
+            <tr>
+              <th scope="col">Quarter</th>
+              <th scope="col">Revenue</th>
+              <th scope="col">Profit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Q1</th>
+              <td>100</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <th scope="row">Q2</th>
+              <td>120</td>
+              <td>30</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Total</th>
+              <td>220</td>
+              <td>50</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section id="structure">
+        <h2>Structure and Layout</h2>
+        <article>
+          <h3>Article title</h3>
+          <p>Self-contained article content.</p>
+        </article>
+        <aside>
+          <h3>Related note</h3>
+          <p>Tangentially related content.</p>
+        </aside>
+        <details>
+          <summary>More information</summary>
+          <p>Hidden details revealed on toggle.</p>
+        </details>
+        <dialog id="sample-dialog">
+          <p>This is a dialog.</p>
+          <form method="dialog">
+            <button type="submit">Close</button>
+          </form>
+        </dialog>
+        <figure>
+          <img src="https://placehold.co/400x200" alt="Placeholder image of 400 by 200 pixels" width="400" height="200">
+          <figcaption>Figure caption describing the image.</figcaption>
+        </figure>
+      </section>
+
+      <section id="media">
+        <h2>Media Placeholders</h2>
+        <h3>Image</h3>
+        <img src="https://placehold.co/300x150" alt="Placeholder image" width="300" height="150">
+        <h3>Audio</h3>
+        <audio controls src="audio.mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <h3>Video</h3>
+        <video controls width="320" height="180" src="video.mp4">
+          Your browser does not support the video element.
+        </video>
+      </section>
+
+      <section id="data">
+        <h2>Badges and Data Representations</h2>
+        <p>Status: <mark>New</mark> <small>Updated today</small></p>
+        <p>Version <var>1.0.0</var> released with <data value="42">forty-two</data> contributors.</p>
+        <p>Last updated: <time datetime="2026-11-25">November 25, 2026</time></p>
+        <p>Address: <address>Example Street 1, Toronto</address></p>
+      </section>
+    </main>
+
+    <aside>
+      <p>Related links: <a href="https://developer.mozilla.org/">MDN Web Docs</a></p>
+    </aside>
+
+    <footer>
+      <p><small>Copyright 2026 decss. All rights reserved.</small></p>
+    </footer>
+  </body>
+</html>
