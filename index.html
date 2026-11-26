@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>decss - Semantic HTML Kitchen Sink</title>
+    <link rel="stylesheet" href="decss.css">
   </head>
   <body>
     <header>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">Toggle theme</button>
       <h1>decss</h1>
       <p>A raw semantic HTML kitchen sink.</p>
       <nav aria-label="Main">
@@ -284,5 +286,24 @@
     <footer>
       <p><small>Copyright 2026 decss. All rights reserved.</small></p>
     </footer>
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var btn = document.getElementById('theme-toggle');
+        var mql = window.matchMedia('(prefers-color-scheme: dark)');
+        function current() {
+          var explicit = root.getAttribute('data-theme');
+          if (explicit) return explicit;
+          return mql.matches ? 'dark' : 'light';
+        }
+        btn.addEventListener('click', function () {
+          var next = current() === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          btn.setAttribute('aria-pressed', String(next === 'dark'));
+        });
+        btn.setAttribute('aria-pressed', String(current() === 'dark'));
+      })();
+    </script>
   </body>
 </html>
